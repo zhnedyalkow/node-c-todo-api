@@ -34,8 +34,8 @@ MongoClient.connect(url, (err, client) => {
         // });
 
 
-        db.collection('Users').deleteOne({ _id: new ObjectId('5bd58ff0887b4549d041623a')}).then((result) => {
-            console.log(result);
-        });
+        // db.collection('Users').deleteOne({ _id: new ObjectId('5bd58ff0887b4549d041623a')}).then((result) => {
+        //     console.log(result);
+        // });
     // client.close();
 });
