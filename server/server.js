@@ -91,7 +91,7 @@ app.get('/todos/:id', (req, res) => {
        // if not todo - send back 404 empty body
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`Started on port ${port}`);
 });
 
