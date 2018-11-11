@@ -1,5 +1,3 @@
-// const MongoClient = require('mongodb').MongoClient;
-
 const { MongoClient, ObjectId } = require('mongodb');
 const assert = require('assert');
 

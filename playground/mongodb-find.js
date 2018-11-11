@@ -1,5 +1,3 @@
-// const MongoClient = require('mongodb').MongoClient;
-
 const { MongoClient, ObjectId } = require('mongodb');
 const assert = require('assert');
 
@@ -13,14 +11,14 @@ MongoClient.connect(url, (err, client) => {
     const dbName = 'TodoApp';
     const db = client.db(dbName);
 
-    // db.collection('Todos').find({
-    //     _id: new ObjectId('5bd58e39a554c457b03c29af')
-    // }).toArray().then((docs) => {
-    //     console.log('Todos');
-    //     console.log(JSON.stringify(docs, undefined, 2)); // undefined for filter function, 2 -> for spacing
-    // }, (err) => {
-    //     console.log('Unable to fetch todos', err);
-    // });
+    db.collection('Todos').find({
+        _id: new ObjectId('5bd58e39a554c457b03c29af')
+    }).toArray().then((docs) => {
+        console.log('Todos');
+        console.log(JSON.stringify(docs, undefined, 2)); // undefined for filter function, 2 -> for spacing
+    }, (err) => {
+        console.log('Unable to fetch todos', err);
+    });
 
     db.collection('Users').find({
         name: 'gango'

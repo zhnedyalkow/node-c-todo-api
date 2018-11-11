@@ -76,16 +76,6 @@ describe('/GET todos', () => {
 
 
 describe('/DELETE /todos/:id', () => {
-    // it('should delete and return todo doc', (done) => {
-    //     request(app)
-    //         .delete(`/todos/${todos[0]._id.toHexString()}`)
-    //         .expect(200)
-    //         .expect((res) => {
-    //             expect(res.body.todos.length).toBe(1);
-    //         })
-    //         .end(done);
-    // });
-
     it('should remove a todo', (done) => {
        var hexId = todos[1]._id.toHexString();
        
@@ -104,9 +94,6 @@ describe('/DELETE /todos/:id', () => {
                     expect(todo).toNotExist();
                     done();
                 }).catch((e) => done(e));
-
-                // query database using fin dById toNotExist
-                // expect.(null).toNotExist
             });
     });
 
